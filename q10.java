@@ -1,89 +1,73 @@
-package helloworld;
+import java.util.Scanner;
 
-import java.util.Random;
-
-public class HelloWorld {
+public class q10 {
 
 	public static void main(String[] args) {
 
-		int num = 4;
-		System.out.println("Hello Comrade");
+		writeLineWrapper();
+
+		writeBlockWrapper();
 		
-//		System.out.println(fib(10));
-		
-		writeLine("*", 10);
-		
-//		for (int i = 1; i <= num; i++) System.out.println(i + ": " + fib(i));
-		
-		
-		
-		
-//		System.out.println(fact(num));
-//		countDown(10);
 	}
 
 	
-	
-	
-	
-	// write recursive java method writeLine that writes a character repeatedly to form a line of n characters for example 
-	// writeLine ('*', 5) produces the line *****
-	public static void writeLine(String c, int i) {
-		if (i == 1) {
-			System.out.println(c);
-			return;
-		}
-		String s = new String(c);
-		s = s.substring(0, 1);
-		writeLine(s.concat(c), i-1);
-	}
-	
-	
-	
-	public static int fib(int n) {
-		if (n <= 1) return 1;
-		return fib(n-1) + fib(n-2);
+	public static void writeLineWrapper() {
+		System.out.println("input characters for writeLine:");
+		Scanner scan = new Scanner(System.in);
+		String character = scan.nextLine();
 		
+		System.out.println("input number of characters for writeLine:");
+		scan = new Scanner(System.in);
+		int num = scan.nextInt();
+		System.out.println(writeLine(character, num));
 		
-		
-		
-	}
-	
-	
-	
-	public static void countDown(int i) {
 
-		System.out.println(i);
-		if (i == 1) return;
-		countDown(i - 1);
+	}
+	
+	
+	public static void writeBlockWrapper() {
+		System.out.println("input characters for writeBlock:");
+		Scanner scan = new Scanner(System.in);
+		String character = scan.nextLine();
+		
+		System.out.println("input number of characters for writeBlock:");
+		scan = new Scanner(System.in);
+		int num = scan.nextInt();
+		
+		System.out.println("input number of lines for writeBlock:");
+		scan = new Scanner(System.in);
+		int lineCount = scan.nextInt();
+		
+		System.out.println(writeBlock(character, num, lineCount));
 
 	}
 	
-	public static int fact(int n) {
-		if (n==1) return n;
-		return n*fact(n-1);
-	}
 	
-	public static int[] genArray (int size) {
-		int[] array = new int[size];
-		
+	/*
+	 * write recursive java method writeLine that writes a character repeatedly to
+	 * form a line of n characters for example writeLine ('*', 5) produces the line *****
+	 * 
+	 * gets a single star
+	 * appends star to final string
+	 */
 
-		for (int i = 0; i < array.length; i++) {
-			array[i] = randomNumberGenerator();
-			System.out.println(i + ", ");
-		}
-		return array;
+	private static String writeLine(String c, int count) {
+		// base case
+		if (count == 1) return c; 
+		return writeLine(c.substring(0, 1).concat(c), count - 1);
+		
 	}
 	
-	
-	
-	private static int randomNumberGenerator() {
+	private static String writeBlock(String c, int charCount, int lineCount) {
 		
+		String line = writeLine(c.substring(0, 1), charCount);
 		
-		Random rand = new Random();
+		if (lineCount == 1) return c;
+		
+		if (c.length() == 1) c = line;
+		
+		return writeBlock(c.concat("\n"+line), charCount, lineCount-1);
+		
+	}
 
-		int  n = rand.nextInt(100) + 1;
-		return n;
-	}
- 
 }
