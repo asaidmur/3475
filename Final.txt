@@ -80,5 +80,8 @@ Graphs baby
 
 	-----------------------------------------------------------------------------
 
-
+	contains 2 sets - nodes/vertices, and edges
+	pg 783
+	breadth first search 	- implement traversal (recursively?)
+	depth first search 	- implement traversal (recursively?)
 
