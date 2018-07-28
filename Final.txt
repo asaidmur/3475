@@ -1,0 +1,84 @@
+Final -
+
+chapter 1- 6/7 covered incidentally
+(principles of recursion)
+use of recursion in implementing java question (Binary tree shit)?
+
+
+
+
+
+
+
+Queues definitely (binary tree)
+
+
+	-----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+binary trees/ binary search trees 
+
+	-----------------------------------------------------------------------------
+
+	A balanced binary tree is the binary tree where 
+	the depth of the two subtrees of every node never differ by more than 1.
+
+
+	A complete binary tree is a binary tree whose all levels except the 
+	last level are completely filled and all the leaves in the 
+	last level are all to the left side.
+
+
+
+*****Every Complete tree is balanced but not the other way around******
+
+
+
+
+implement using Dynamic Node representation 	(Linked)
+implement using Array representation		(Sequential)
+
+
+
+
+heaps 	
+	
+	-----------------------------------------------------------------------------
+
+
+
+
+
+	Heap just guarantees that elements on higher levels 
+	are greater (for max-heap) or smaller (for min-heap) 
+	than elements on lower levels, whereas BST guarantees 
+	order (from "left" to "right"). If you want sorted 
+	elements, go with BST.by Dante is not a geek
+
+	Heap is better at findMin/findMax (O(1)), while BST is 
+	good at all finds (O(logN)). Insert is O(logN) for both 
+	structures. If you only care about findMin/findMax 
+	(e.g. priority-related), go with heap. 
+	If you want everything sorted, go with BST.
+
+
+
+
+
+
+priority queues and AVL trees *NOT* covered
+
+
+Graphs baby
+
+
+	-----------------------------------------------------------------------------
+
+
+
