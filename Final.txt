@@ -3,7 +3,12 @@ Final -
 chapter 1- 6/7 covered incidentally
 (principles of recursion)
 use of recursion in implementing java question (Binary tree shit)?
+NO MINHEAP
+LinkList imprtable
 
+Binary searchTree
+graphs
+queue?
 
 
 
